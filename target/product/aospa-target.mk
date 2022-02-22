@@ -16,6 +16,10 @@
 PRODUCT_PACKAGES += \
     Abstruct
 
+# Adblock
+PRODUCT_PACKAGES += \
+    hosts.aospa_adblock
+
 # AOSPA Version.
 $(call inherit-product, vendor/aospa/target/product/version.mk)
 
