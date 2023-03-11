@@ -19,6 +19,11 @@ PRODUCT_PACKAGES += \
 # AOSPA Version.
 $(call inherit-product, vendor/aospa/target/product/version.mk)
 
+# Apps
+PRODUCT_PACKAGES += \
+    Apps \
+    Camera
+
 # APNs
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
@@ -31,10 +36,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Boot Animation
 $(call inherit-product, vendor/aospa/bootanimation/bootanimation.mk)
-
-# Camera
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
 
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/permissions/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
